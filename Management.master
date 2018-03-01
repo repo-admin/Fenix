@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UPC.Master" AutoEventWireup="true" CodeBehind="Management.master.cs" Inherits="Fenix.Management" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="BaseHeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="contMainBase" ContentPlaceHolderID="BaseMainContent" runat="server">
+	<div class="nav-left" style="margin-top: 15px;">
+		<ul>
+            <li id="liKittingCodeList" runat="server">
+                <asp:HyperLink ID="mnuKittingCodeList" runat="server" ClientIDMode="Static" ToolTip="" Text="Číselník kitů"></asp:HyperLink>
+            </li>
+
+			<li id="liKittingBrowse" runat="server">
+				<asp:HyperLink ID="mnuMaDestPlaces" runat="server" ClientIDMode="Static" ToolTip="" Text="Cílové destinace"></asp:HyperLink>
+			</li>
+
+			<li id="liMaCardStockItems" runat="server">
+				<asp:HyperLink ID="mnuMaCardStockItems" runat="server" ClientIDMode="Static" ToolTip="" Text="Stav skladu"></asp:HyperLink>
+			</li>
+
+			<li id="liMaHistoryMovesSN" runat="server">
+				<asp:HyperLink ID="mnuMaHistoryMovesSN" runat="server" ClientIDMode="Static" ToolTip="" Text="Historie pohybů SN"></asp:HyperLink>
+			</li>
+
+			<li id="liMaInternalMovements" runat="server">
+				<asp:HyperLink ID="mnuMaInternalMovements" runat="server" ClientIDMode="Static" ToolTip="" Text="Interní pohyby (M/P)"></asp:HyperLink>
+			</li>
+                  
+			<li id="liMaInternalDocuments" runat="server">
+				<asp:HyperLink ID="mnuMaInternalDocuments" runat="server" ClientIDMode="Static" ToolTip="" Text="Interní doklady"></asp:HyperLink>
+			</li>
+            
+			<%-- delete via Email
+                <li id="liMaDeletedOrders" runat="server">
+				    <asp:HyperLink ID="mnuMaDeletedOrders" runat="server" ClientIDMode="Static" ToolTip="" Text="D0 zrušené objednávky"></asp:HyperLink>
+			    </li>
+            --%>
+            
+            <%--via XML--%>
+			<li id="liMaDeleteMessage" runat="server">
+				<asp:HyperLink ID="mnuMaDeleteMessage" runat="server" ClientIDMode="Static" ToolTip="" Text="D0 zrušené objednávky"></asp:HyperLink>
+			</li>
+
+			<%--via XML--%>
+			<li id="liMaDeleteMessageReconciliation" runat="server">
+				<asp:HyperLink ID="mnuMaDeleteMessageReconciliation" runat="server" ClientIDMode="Static" ToolTip="" Text="D1 zrušené objednávky"></asp:HyperLink>
+			</li>
+
+		</ul>
+	</div>
+	<div style="clear: right; float: left; width: 1010px; margin-left: 20px; margin-top: 15px">
+		<asp:ContentPlaceHolder ID="MainContent" runat="server">
+		</asp:ContentPlaceHolder>
+	</div>
+</asp:Content>

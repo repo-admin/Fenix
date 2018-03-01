@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UPC.master.cs" Inherits="UpcMaster.UPC" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Assembly="UpcWebControls" Namespace="UPC.WebControls" TagPrefix="upchdr" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>FENIX</title>
+<link rel="shortcut icon" href="~/img/favicon.ico" />
+<link type="text/css" href="~/styles.css" rel="stylesheet" />
+
+	<asp:ContentPlaceHolder ID="BaseHeadContent" runat="server">
+	</asp:ContentPlaceHolder>
+
+	<style type="text/css">
+		.auto-style1
+		{
+			width: 2px;
+			height: 22px;
+		}
+	</style>
+
+     <script type = "text/javascript">
+         function ConfirmDeleteOrder()
+         {
+             var confirm_value = document.createElement("INPUT");
+             confirm_value.type = "hidden";
+             confirm_value.name = "confirm_delete_order";
+             if (confirm("Opravdu chcete zrušit tuto objednávku?")) {
+                 confirm_value.value = "Ano";
+             } else {
+                 confirm_value.value = "Ne";
+             }
+             document.forms[0].appendChild(confirm_value);
+         }
+
+         function EventOnLoad()
+         {
+             var message = document.getElementById('MessageText').value; 
+             if (message != '')
+             {
+                 alert(message);
+             }
+        }
+    </script>
+
+</head>
+<body onload="javascript:EventOnLoad();">
+	<form id="form1" runat="server">
+	<div>
+		<asp:ScriptManager ID="scriptMngr" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true" EnablePageMethods="true" AsyncPostBackTimeOut="600">
+		</asp:ScriptManager>
+	</div>
+	<div id="bodyin" class="contmain">
+			<div class="header-right">
+				<div class="top-link">
+					<asp:Label ID="Label1" runat="server" Text="Uživatel: " Font-Size="8px"></asp:Label>
+					<asp:Label ID="lblCurrentUser" runat="server" Text="Nepřihlášen" Font-Bold="true" Font-Size="8px"></asp:Label><br />
+					<asp:Label ID="Label2" runat="server" Text="Verze:  4" Font-Size="8px"></asp:Label>
+				</div>
+			</div>
+		<upchdr:HeaderControl ID="UpcHdrCtrl" runat="server" Width="1240px" HeaderText="Fenix" ToolTip="" >
+			<HeaderTextStyle CssClass="headertext" />
+			<ItemTemplate>
+			</ItemTemplate>
+		</upchdr:HeaderControl>
+
+		<br />
+		<div class="mainnav">
+			<ul id="ulMainNav" runat="server" clientidmode="Static">
+				<li id="liHome" runat="server">
+					<asp:HyperLink ID="t_menu_tab_home" runat="server" CssClass="navactive" ClientIDMode="Static" ToolTip="Úvodní stránka">&nbsp;</asp:HyperLink></li>
+				<li id="liReception" runat="server">
+					<asp:HyperLink ID="mnuReception" runat="server" ClientIDMode="Static" ToolTip="" Text="Příjem zboží"></asp:HyperLink></li>
+				<li id="liKitting" runat="server">
+					<asp:HyperLink ID="mnuKitting" runat="server" ClientIDMode="Static" ToolTip="" Text="Kitting"></asp:HyperLink></li>
+				<li id="liExpedition" runat="server">
+					<asp:HyperLink ID="mnuExpedition" runat="server" ClientIDMode="Static" ToolTip="" Text="Expedice"></asp:HyperLink></li>
+				<li id="liVratRep" runat="server">
+					<asp:HyperLink ID="mnuVratRep" runat="server" ClientIDMode="Static" ToolTip="" Text="Vratky"></asp:HyperLink></li>
+				<li id="liReports" runat="server">
+					<asp:HyperLink ID="mnuReport" runat="server" ClientIDMode="Static" ToolTip="" Text="Reporty"></asp:HyperLink></li>
+				<li id="liManagement" runat="server">
+					<asp:HyperLink ID="mnuManagement" runat="server" ClientIDMode="Static" Text="Správa"></asp:HyperLink></li>
+			</ul>
+			<div id="helpnav">
+				<asp:ImageButton ID="btnHelp" runat="server" ImageUrl="~/img/help.png" CssClass="buttonimg" Visible="false" OnClientClick="return ShowHelp('dialog-help', 'Nápověda', 960, 720);" ToolTip="Nápověda" />
+			</div>
+		</div>
+		<div>
+			<asp:ContentPlaceHolder ID="BaseMainContent" runat="server">
+
+			</asp:ContentPlaceHolder>
+		</div>
+	</div>
+	<div id="dialog-message" class="ui-dialog-content ui-widget-content" style="width: 480px; height: 200px; display: none;">
+		<div id="dialog-message-text" class="plaintext"></div>
+	</div>
+	<div id="dialog-help" class="ui-dialog-content ui-widget-content" style="width: 960px; height: 720px; display: none;">
+	</div>
+        <asp:HiddenField ID="MessageText" Value="" runat="server" ClientIDMode="Static"/>
+	</form>
+</body>
+</html>

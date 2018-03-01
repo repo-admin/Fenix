@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDA5C61C-33BC-4DB0-91A4-47B6BD30D9A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fenix</RootNamespace>
+    <AssemblyName>Fenix</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\Upc.DLL\LIB\DOTNET45\DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\DLL\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FenixHelper">
+      <HintPath>..\FenixHelper\bin\Debug\FenixHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Upc.Security">
+      <HintPath>..\..\Upc.DLL\LIB\DOTNET40\DLL\Upc.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="UpcExtensions">
+      <HintPath>..\..\Upc.DLL\LIB\DOTNET40\DLL\UpcExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UpcWebControls">
+      <HintPath>..\..\Upc.DLL\LIB\DOTNET40\DLL\UpcWebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="UpcWebUtils">
+      <HintPath>..\..\Upc.DLL\LIB\DOTNET40\DLL\UpcWebUtils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Users.xml" />
+    <Content Include="CardStockDetail.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ExExpedition.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="HomeReconciliation.aspx" />
+    <Content Include="img\add.png" />
+    <Content Include="img\add_branches_button.png" />
+    <Content Include="img\add_contact_button.png" />
+    <Content Include="img\admins.png" />
+    <Content Include="img\bg_topnav.png" />
+    <Content Include="img\bg_topnav_hover.png" />
+    <Content Include="img\bluedivider.png" />
+    <Content Include="img\calculation.png" />
+    <Content Include="img\calculator.png" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\call.png" />
+    <Content Include="img\cal_title_l.png" />
+    <Content Include="img\cal_title_m.png" />
+    <Content Include="img\cal_title_r.png" />
+    <Content Include="img\card.png" />
+    <Content Include="img\check.png" />
+    <Content Include="img\checkSmall.png" />
+    <Content Include="img\collapse.jpg" />
+    <Content Include="img\collapse.png" />
+    <Content Include="img\contacts.png" />
+    <Content Include="img\customer.png" />
+    <Content Include="img\customerSmall.png" />
+    <Content Include="img\data_add.png" />
+    <Content Include="img\data_addSmall.png" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\deletec.png" />
+    <Content Include="img\deletecSmall.png" />
+    <Content Include="img\deletec_dm.png" />
+    <Content Include="img\delete_dm.png" />
+    <Content Include="img\delete_dustbin.png" />
+    <Content Include="img\delete_dustbin_red2.png" />
+    <Content Include="img\detail.png" />
+    <Content Include="img\detailSmall.png" />
+    <Content Include="img\documents.png" />
+    <Content Include="img\down.png" />
+    <Content Include="img\edit.png" />
+    <Content Include="img\edit_dm.png" />
+    <Content Include="img\eko_small.png" />
+    <Content Include="img\excel.gif" />
+    <Content Include="img\excel.png" />
+    <Content Include="img\excelSmall.png" />
+    <Content Include="img\expand.jpg" />
+    <Content Include="img\expand.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\find.png" />
+    <Content Include="img\ghdr.png" />
+    <Content Include="img\grwh.gif" />
+    <Content Include="img\help.png" />
+    <Content Include="img\helpSmall.png" />
+    <Content Include="img\home.png" />
+    <Content Include="img\info.png" />
+    <Content Include="img\internet.png" />
+    <Content Include="img\invert.png" />
+    <Content Include="img\karta.gif" />
+    <Content Include="img\minus.gif" />
+    <Content Include="img\mnu.png" />
+    <Content Include="img\mnuh.png" />
+    <Content Include="img\mnus.png" />
+    <Content Include="img\new_button.png" />
+    <Content Include="img\plus.gif" />
+    <Content Include="img\print.gif" />
+    <Content Include="img\printer.png" />
+    <Content Include="img\Question.PNG" />
+    <Content Include="img\search_button.png" />
+    <Content Include="img\search_button_sprite.png" />
+    <Content Include="img\subitems.png" />
+    <Content Include="img\text.png" />
+    <Content Include="img\throbber.gif" />
+    <Content Include="img\uploading.gif" />
+    <Content Include="img\users.png" />
+    <Content Include="img\wait.gif" />
+    <Content Include="KiApproval.aspx" />
+    <Content Include="KiCardStockItems.aspx" />
+    <Content Include="KiKitting.aspx" />
+    <Content Include="KiKittingBrowse.aspx" />
+    <Content Include="KiKittingCodeList.aspx" />
+    <Content Include="KiManuallyOrders.aspx" />
+    <Content Include="KiReconciliation.aspx" />
+    <Content Include="KiRelease.aspx" />
+    <Content Include="KiRepase01.aspx" />
+    <Content Include="KiReturns.aspx" />
+    <Content Include="KiShipment.aspx" />
+    <Content Include="KiShipmentReconciliation.aspx" />
+    <Content Include="MaCardStockItems.aspx" />
+    <Content Include="MaCheckReleaseNote.aspx" />
+    <Content Include="MaDeletedOrders.aspx" />
+    <Content Include="MaDeleteMessage.aspx" />
+    <Content Include="MaDeleteMessageReconciliation.aspx" />
+    <Content Include="MaDestPlaces.aspx" />
+    <Content Include="MaHistoryMovesSN.aspx" />
+    <Content Include="MaInternalDocuments.aspx" />
+    <Content Include="MaInternalMovements.aspx" />
+    <Content Include="MaManagement.aspx" />
+    <Content Include="ManuallyOrders.aspx" />
+    <Content Include="ManuallyShipment.aspx" />
+    <Content Include="NoAcces.aspx" />
+    <Content Include="ReCardStockItems.aspx" />
+    <Content Include="ReManuallyOrders.aspx" />
+    <Content Include="ReReception.aspx" />
+    <Content Include="ReReceptionBrowse.aspx" />
+    <Content Include="ReReconciliation.aspx" />
+    <Content Include="RpReport.aspx" />
+    <Content Include="RpReportShipment.aspx" />
+    <Content Include="styles.css" />
+    <Content Include="VrCardStockItems.aspx" />
+    <Content Include="VrRepaseRF0.aspx" />
+    <Content Include="VrRepaseRF1.aspx" />
+    <Content Include="VrRpVratkyVR2.aspx" />
+    <Content Include="VrRpVratkyVR3.aspx" />
+    <Content Include="VrRpVratRep.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationHelpers\LotFile\LotFileChecking.cs" />
+    <Compile Include="ApplicationHelpers\LotFile\LotFileDB.cs" />
+    <Compile Include="ApplicationHelpers\ReceptionManuallyOrdersHelper.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardStockDetail.ascx.cs">
+      <DependentUpon>CardStockDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardStockDetail.ascx.designer.cs">
+      <DependentUpon>CardStockDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationHelpers\HistoryMovesSN.cs" />
+    <Compile Include="CardStockItems.cs">
+      <DependentUpon>FenixModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cdlMessageNumber.cs">
+      <DependentUpon>FenixModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommunicationMessagesDeleteMessage.cs">
+      <DependentUpon>FenixModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="D0DeleteMessage.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExExpedition.aspx.cs">
+      <DependentUpon>ExExpedition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExExpedition.aspx.designer.cs">
+      <DependentUpon>ExExpedition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Expedition.master.cs">
+      <DependentUpon>Expedition.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Expedition.master.designer.cs">
+      <DependentUpon>Expedition.master</DependentUpon>
+    </Compile>
+    <Compile Include="FenixModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FenixModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FenixModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FenixModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FenixModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FenixModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationHelpers\InternalMovementsHelper.cs" />
+    <Compile Include="ApplicationHelpers\ShipmentHelper.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeReconciliation.aspx.cs">
+      <DependentUpon>HomeReconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeReconciliation.aspx.designer.cs">
+      <DependentUpon>HomeReconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InternalDocument.cs" />
+    <Compile Include="InternalDocuments.cs">
+      <DependentUpon>FenixModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalDocumentsSources.cs">
+      <DependentUpon>FenixModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KartySkladuExcel.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiApproval.aspx.cs">
+      <DependentUpon>KiApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiApproval.aspx.designer.cs">
+      <DependentUpon>KiApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiCardStockItems.aspx.cs">
+      <DependentUpon>KiCardStockItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiCardStockItems.aspx.designer.cs">
+      <DependentUpon>KiCardStockItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiKitting.aspx.cs">
+      <DependentUpon>KiKitting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiKitting.aspx.designer.cs">
+      <DependentUpon>KiKitting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiKittingBrowse.aspx.cs">
+      <DependentUpon>KiKittingBrowse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiKittingBrowse.aspx.designer.cs">
+      <DependentUpon>KiKittingBrowse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiKittingCodeList.aspx.cs">
+      <DependentUpon>KiKittingCodeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiKittingCodeList.aspx.designer.cs">
+      <DependentUpon>KiKittingCodeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiManuallyOrders.aspx.cs">
+      <DependentUpon>KiManuallyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiManuallyOrders.aspx.designer.cs">
+      <DependentUpon>KiManuallyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiReconciliation.aspx.cs">
+      <DependentUpon>KiReconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiReconciliation.aspx.designer.cs">
+      <DependentUpon>KiReconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiRelease.aspx.cs">
+      <DependentUpon>KiRelease.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiRelease.aspx.designer.cs">
+      <DependentUpon>KiRelease.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiRepase01.aspx.cs">
+      <DependentUpon>KiRepase01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiRepase01.aspx.designer.cs">
+      <DependentUpon>KiRepase01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiReturns.aspx.cs">
+      <DependentUpon>KiReturns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiReturns.aspx.designer.cs">
+      <DependentUpon>KiReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiShipment.aspx.cs">
+      <DependentUpon>KiShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiShipment.aspx.designer.cs">
+      <DependentUpon>KiShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KiShipmentReconciliation.aspx.cs">
+      <DependentUpon>KiShipmentReconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KiShipmentReconciliation.aspx.designer.cs">
+      <DependentUpon>KiShipmentReconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kitting.master.cs">
+      <DependentUpon>Kitting.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kitting.master.designer.cs">
+      <DependentUpon>Kitting.master</DependentUpon>
+    </Compile>
+    <Compile Include="MaCardStockItems.aspx.cs">
+      <DependentUpon>MaCardStockItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaCardStockItems.aspx.designer.cs">
+      <DependentUpon>MaCardStockItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaCheckReleaseNote.aspx.cs">
+      <DependentUpon>MaCheckReleaseNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaCheckReleaseNote.aspx.designer.cs">
+      <DependentUpon>MaCheckReleaseNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaDeletedOrders.aspx.cs">
+      <DependentUpon>MaDeletedOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaDeletedOrders.aspx.designer.cs">
+      <DependentUpon>MaDeletedOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaDeleteMessage.aspx.cs">
+      <DependentUpon>MaDeleteMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaDeleteMessage.aspx.designer.cs">
+      <DependentUpon>MaDeleteMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaDeleteMessageReconciliation.aspx.cs">
+      <DependentUpon>MaDeleteMessageReconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaDeleteMessageReconciliation.aspx.designer.cs">
+      <DependentUpon>MaDeleteMessageReconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaDestPlaces.aspx.cs">
+      <DependentUpon>MaDestPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaDestPlaces.aspx.designer.cs">
+      <DependentUpon>MaDestPlaces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaHistoryMovesSN.aspx.cs">
+      <DependentUpon>MaHistoryMovesSN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaHistoryMovesSN.aspx.designer.cs">
+      <DependentUpon>MaHistoryMovesSN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaInternalDocuments.aspx.cs">
+      <DependentUpon>MaInternalDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaInternalDocuments.aspx.designer.cs">
+      <DependentUpon>MaInternalDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaInternalMovements.aspx.cs">
+      <DependentUpon>MaInternalMovements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaInternalMovements.aspx.designer.cs">
+      <DependentUpon>MaInternalMovements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaManagement.aspx.cs">
+      <DependentUpon>MaManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaManagement.aspx.designer.cs">
+      <DependentUpon>MaManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.master.cs">
+      <DependentUpon>Management.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.master.designer.cs">
+      <DependentUpon>Management.master</DependentUpon>
+    </Compile>
+    <Compile Include="ManuallyOrders.aspx.cs">
+      <DependentUpon>ManuallyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManuallyOrders.aspx.designer.cs">
+      <DependentUpon>ManuallyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManuallyShipment.aspx.cs">
+      <DependentUpon>ManuallyShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManuallyShipment.aspx.designer.cs">
+      <DependentUpon>ManuallyShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoAcces.aspx.cs">
+      <DependentUpon>NoAcces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoAcces.aspx.designer.cs">
+      <DependentUpon>NoAcces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationHelpers\BaseHelper.cs" />
+    <Compile Include="ApplicationHelpers\KittingReconciliationHelper.cs" />
+    <Compile Include="ApplicationHelpers\ReceptionConfirmationHelper.cs" />
+    <Compile Include="ApplicationHelpers\RefurbishedConfirmationHelper.cs" />
+    <Compile Include="ApplicationHelpers\ShipmentReconciliationHelper.cs" />
+    <Compile Include="PagerData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BC.cs" />
+    <Compile Include="ReCardStockItems.aspx.cs">
+      <DependentUpon>ReCardStockItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReCardStockItems.aspx.designer.cs">
+      <DependentUpon>ReCardStockItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reception.master.cs">
+      <DependentUpon>Reception.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reception.master.designer.cs">
+      <DependentUpon>Reception.master</DependentUpon>
+    </Compile>
+    <Compile Include="ReManuallyOrders.aspx.cs">
+      <DependentUpon>ReManuallyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReManuallyOrders.aspx.designer.cs">
+      <DependentUpon>ReManuallyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ShipmentOrdersMonthlyReport.cs" />
+    <Compile Include="ReReception.aspx.cs">
+      <DependentUpon>ReReception.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReReception.aspx.designer.cs">
+      <DependentUpon>ReReception.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReReceptionBrowse.aspx.cs">
+      <DependentUpon>ReReceptionBrowse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReReceptionBrowse.aspx.designer.cs">
+      <DependentUpon>ReReceptionBrowse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReReconciliation.aspx.cs">
+      <DependentUpon>ReReconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReReconciliation.aspx.designer.cs">
+      <DependentUpon>ReReconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RpMasterPageReport.master.cs">
+      <DependentUpon>RpMasterPageReport.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RpMasterPageReport.master.designer.cs">
+      <DependentUpon>RpMasterPageReport.master</DependentUpon>
+    </Compile>
+    <Compile Include="RpReport.aspx.cs">
+      <DependentUpon>RpReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RpReport.aspx.designer.cs">
+      <DependentUpon>RpReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RpReportShipment.aspx.cs">
+      <DependentUpon>RpReportShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RpReportShipment.aspx.designer.cs">
+      <DependentUpon>RpReportShipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UPC.Master.cs">
+      <DependentUpon>UPC.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UPC.Master.designer.cs">
+      <DependentUpon>UPC.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VratRep.master.cs">
+      <DependentUpon>VratRep.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VratRep.master.designer.cs">
+      <DependentUpon>VratRep.master</DependentUpon>
+    </Compile>
+    <Compile Include="VrCardStockItems.aspx.cs">
+      <DependentUpon>VrCardStockItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VrCardStockItems.aspx.designer.cs">
+      <DependentUpon>VrCardStockItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VrRepaseRF0.aspx.cs">
+      <DependentUpon>VrRepaseRF0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VrRepaseRF0.aspx.designer.cs">
+      <DependentUpon>VrRepaseRF0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VrRepaseRF1.aspx.cs">
+      <DependentUpon>VrRepaseRF1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VrRepaseRF1.aspx.designer.cs">
+      <DependentUpon>VrRepaseRF1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VrRpVratkyVR2.aspx.cs">
+      <DependentUpon>VrRpVratkyVR2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VrRpVratkyVR2.aspx.designer.cs">
+      <DependentUpon>VrRpVratkyVR2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VrRpVratkyVR3.aspx.cs">
+      <DependentUpon>VrRpVratkyVR3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VrRpVratkyVR3.aspx.designer.cs">
+      <DependentUpon>VrRpVratkyVR3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VrRpVratRep.aspx.cs">
+      <DependentUpon>VrRpVratRep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VrRpVratRep.aspx.designer.cs">
+      <DependentUpon>VrRpVratRep.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UPC.Master" />
+    <Content Include="Reception.master" />
+    <Content Include="Kitting.master" />
+    <Content Include="Management.master" />
+    <Content Include="packages.config" />
+    <Content Include="Expedition.master" />
+    <EntityDeploy Include="FenixModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FenixModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="FenixModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FenixModel.edmx</DependentUpon>
+      <LastGenOutput>FenixModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FenixModel.edmx.diagram">
+      <DependentUpon>FenixModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="FenixModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FenixModel.edmx</DependentUpon>
+      <LastGenOutput>FenixModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\Fenix.pubxml" />
+    <Content Include="VratRep.master" />
+    <Content Include="RpMasterPageReport.master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59917</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

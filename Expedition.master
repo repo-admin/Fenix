@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UPC.Master" AutoEventWireup="true" CodeBehind="Expedition.master.cs" Inherits="Fenix.Expedition" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="BaseHeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="contMainBase" ContentPlaceHolderID="BaseMainContent" runat="server">
+    <div class="nav-left" style="margin-top: 15px;">
+        <ul>
+            <li id="liKittingShipment" runat="server">
+                <asp:HyperLink ID="mnuKittingShipment" runat="server" ClientIDMode="Static" ToolTip="" Text="S0 - Objednávka expedice"></asp:HyperLink>
+            </li>
+            <li id="liKittingShipmentReconciliation" runat="server">
+                <asp:HyperLink ID="mnuKittingShipmentReconciliation" runat="server" ClientIDMode="Static" ToolTip="" Text="S1 - Schválení expedice"></asp:HyperLink>
+            </li>
+			<li id="liMaCheckReleaseNote" runat="server">
+				<asp:HyperLink ID="mnuMaCheckReleaseNote" runat="server" ClientIDMode="Static" ToolTip="" Text="Schvalování výdejek" ></asp:HyperLink>
+			</li>
+        </ul>
+    </div>
+    <div style="clear: right; float: left; width: 1010px; margin-left: 20px; margin-top: 15px">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

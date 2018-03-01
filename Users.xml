@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<USERS>
+  <LOGIN id="1">
+    <Nazev>REZLER</Nazev>
+    <ZiCyZ>1084</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="2">
+    <Nazev>WECZEREK</Nazev>
+    <ZiCyZ>452</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="3">
+    <Nazev>VAVRAD</Nazev>
+    <ZiCyZ>1943</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="4">
+    <Nazev>BEJSOVEC</Nazev>
+    <ZiCyZ>20</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="5">
+    <Nazev>BARTAM</Nazev>
+    <ZiCyZ>14</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="6">
+    <Nazev>CHOBOT</Nazev>
+    <ZiCyZ>164</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="7">
+    <Nazev>MULLEROVA</Nazev>
+    <ZiCyZ>2075</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="8">
+    <Nazev>STODOLOVA</Nazev>
+    <ZiCyZ>780</ZiCyZ>
+  </LOGIN>
+  <LOGIN id="9">
+    <Nazev>BALAC</Nazev>
+    <ZiCyZ>8</ZiCyZ>
+  </LOGIN>
+</USERS> 

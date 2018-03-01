@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UPC.Master" AutoEventWireup="true" CodeBehind="VratRep.master.cs" Inherits="Fenix.VratRep" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="BaseHeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="contMainBase" ContentPlaceHolderID="BaseMainContent" runat="server">
+    <div class="nav-left" style="margin-top: 15px;">
+        <ul>
+            <%--			<li id="liKittingRepase01" runat="server">
+				<asp:HyperLink ID="mnuKittingRepase01" runat="server" ClientIDMode="Static" ToolTip="" Text="Schválení expedice repase"></asp:HyperLink></li>--%>
+            <li id="liKittingReturns01" runat="server">
+                <asp:HyperLink ID="mnuKittingReturns01" runat="server" ClientIDMode="Static" ToolTip="" Text="VR1 - Vratky CPE"></asp:HyperLink></li>
+            <li id="liVrRepaseVR2" runat="server">
+                <asp:HyperLink ID="mnuVrRepaseVR2" runat="server" ClientIDMode="Static" ToolTip="Items" Text="VR2 - Vratky příslušenství"></asp:HyperLink></li>
+            <li id="liVrRepaseVR3" runat="server">
+                <asp:HyperLink ID="mnuVrRepaseVR3" runat="server" ClientIDMode="Static" ToolTip="" Text="VR3 - Expedice do TRR"></asp:HyperLink></li>
+            <li id="liVrCardStockItems" runat="server" visible="false">
+                <asp:HyperLink ID="mnuVrCardStockItems" runat="server" ClientIDMode="Static" ToolTip="" Text="Karty materiálů a zařízení"></asp:HyperLink></li>
+        </ul>
+    </div>
+    <div style="clear: right; float: left; width: 1010px; margin-left: 20px; margin-top: 15px">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

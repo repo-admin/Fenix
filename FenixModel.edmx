@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FenixRezlerTestyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CardStockItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemVerKit" Type="bit" Nullable="false" />
+          <Property Name="ItemOrKitID" Type="int" Nullable="false" />
+          <Property Name="ItemOrKitUnitOfMeasureId" Type="int" Nullable="false" />
+          <Property Name="ItemOrKitQuantity" Type="numeric" Precision="21" Scale="3" StoreGeneratedPattern="Computed" />
+          <Property Name="ItemOrKitQuality" Type="int" />
+          <Property Name="ItemOrKitFree" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitUnConsilliation" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReserved" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReleasedForExpedition" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitExpedited" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="StockId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="ModifyDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifyUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cdlMessageNumber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Code" Type="nchar" MaxLength="3" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastFreeNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CommunicationMessagesDeleteMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MessageId" Type="int" Nullable="false" />
+          <Property Name="MessageTypeId" Type="int" Nullable="false" />
+          <Property Name="MessageTypeDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="MessageStatusId" Type="int" Nullable="false" />
+          <Property Name="DeleteId" Type="int" Nullable="false" />
+          <Property Name="DeleteMessageId" Type="int" Nullable="false" />
+          <Property Name="DeleteMessageTypeId" Type="int" Nullable="false" />
+          <Property Name="DeleteMessageTypeDescription" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Notice" Type="nvarchar(max)" />
+          <Property Name="SentDate" Type="datetime" />
+          <Property Name="SentUserId" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="ModifyDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifyUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InternalDocuments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemVerKit" Type="bit" Nullable="false" />
+          <Property Name="ItemOrKitID" Type="int" Nullable="false" />
+          <Property Name="ItemOrKitUnitOfMeasureId" Type="int" Nullable="false" />
+          <Property Name="ItemOrKitQualityId" Type="int" />
+          <Property Name="ItemOrKitQuantityBefore" Type="numeric" Precision="21" Scale="3" StoreGeneratedPattern="Computed" />
+          <Property Name="ItemOrKitQuantityAfter" Type="numeric" Precision="21" Scale="3" StoreGeneratedPattern="Computed" />
+          <Property Name="ItemOrKitFreeBefore" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitFreeAfter" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitUnConsilliationBefore" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitUnConsilliationAfter" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReservedBefore" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReservedAfter" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReleasedForExpeditionBefore" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReleasedForExpeditionAfter" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitExpeditedBefore" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="ItemOrKitExpeditedAfter" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="StockId" Type="int" Nullable="false" />
+          <Property Name="InternalDocumentsSourceId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="ModifyDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifyUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InternalDocumentsSources">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="ModifyDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifyUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="FenixRezlerTestyModelStoreContainer">
+          <EntitySet Name="CardStockItems" EntityType="Self.CardStockItems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cdlMessageNumber" EntityType="Self.cdlMessageNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CommunicationMessagesDeleteMessage" EntityType="Self.CommunicationMessagesDeleteMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InternalDocuments" EntityType="Self.InternalDocuments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InternalDocumentsSources" EntityType="Self.InternalDocumentsSources" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FenixRezlerTestyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CardStockItems">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemVerKit" Type="Boolean" Nullable="false" />
+          <Property Name="ItemOrKitID" Type="Int32" Nullable="false" />
+          <Property Name="ItemOrKitUnitOfMeasureId" Type="Int32" Nullable="false" />
+          <Property Name="ItemOrKitQuantity" Type="Decimal" Precision="21" Scale="3" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ItemOrKitQuality" Type="Int32" />
+          <Property Name="ItemOrKitFree" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitUnConsilliation" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReserved" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReleasedForExpedition" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitExpedited" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="StockId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifyUserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InternalDocuments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemVerKit" Type="Boolean" Nullable="false" />
+          <Property Name="ItemOrKitID" Type="Int32" Nullable="false" />
+          <Property Name="ItemOrKitUnitOfMeasureId" Type="Int32" Nullable="false" />
+          <Property Name="ItemOrKitQualityId" Type="Int32" />
+          <Property Name="ItemOrKitQuantityBefore" Type="Decimal" Precision="21" Scale="3" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ItemOrKitQuantityAfter" Type="Decimal" Precision="21" Scale="3" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ItemOrKitFreeBefore" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitFreeAfter" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitUnConsilliationBefore" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitUnConsilliationAfter" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReservedBefore" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReservedAfter" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReleasedForExpeditionBefore" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitReleasedForExpeditionAfter" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ItemOrKitExpeditedBefore" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="ItemOrKitExpeditedAfter" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="StockId" Type="Int32" Nullable="false" />
+          <Property Name="InternalDocumentsSourceId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifyUserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InternalDocumentsSources">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifyUserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="FenixEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CardStockItems" EntityType="Self.CardStockItems" />
+          <EntitySet Name="InternalDocuments" EntityType="Self.InternalDocuments" />
+          <EntitySet Name="InternalDocumentsSources" EntityType="Self.InternalDocumentsSources" />
+          <EntitySet Name="cdlMessageNumber" EntityType="FenixRezlerTestyModel.cdlMessageNumber" />
+          <EntitySet Name="CommunicationMessagesDeleteMessage" EntityType="FenixRezlerTestyModel.CommunicationMessagesDeleteMessage" />
+        </EntityContainer>
+        <EntityType Name="cdlMessageNumber">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="LastFreeNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CommunicationMessagesDeleteMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MessageId" Type="Int32" Nullable="false" />
+          <Property Name="MessageTypeId" Type="Int32" Nullable="false" />
+          <Property Name="MessageTypeDescription" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MessageStatusId" Type="Int32" Nullable="false" />
+          <Property Name="DeleteId" Type="Int32" Nullable="false" />
+          <Property Name="DeleteMessageId" Type="Int32" Nullable="false" />
+          <Property Name="DeleteMessageTypeId" Type="Int32" Nullable="false" />
+          <Property Name="DeleteMessageTypeDescription" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notice" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SentDate" Type="DateTime" Precision="3" />
+          <Property Name="SentUserId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ModifyDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifyUserId" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FenixRezlerTestyModelStoreContainer" CdmEntityContainer="FenixEntities">
+          <EntitySetMapping Name="CardStockItems">
+            <EntityTypeMapping TypeName="FenixRezlerTestyModel.CardStockItems">
+              <MappingFragment StoreEntitySet="CardStockItems">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ItemVerKit" ColumnName="ItemVerKit" />
+                <ScalarProperty Name="ItemOrKitID" ColumnName="ItemOrKitID" />
+                <ScalarProperty Name="ItemOrKitUnitOfMeasureId" ColumnName="ItemOrKitUnitOfMeasureId" />
+                <ScalarProperty Name="ItemOrKitQuantity" ColumnName="ItemOrKitQuantity" />
+                <ScalarProperty Name="ItemOrKitQuality" ColumnName="ItemOrKitQuality" />
+                <ScalarProperty Name="ItemOrKitFree" ColumnName="ItemOrKitFree" />
+                <ScalarProperty Name="ItemOrKitUnConsilliation" ColumnName="ItemOrKitUnConsilliation" />
+                <ScalarProperty Name="ItemOrKitReserved" ColumnName="ItemOrKitReserved" />
+                <ScalarProperty Name="ItemOrKitReleasedForExpedition" ColumnName="ItemOrKitReleasedForExpedition" />
+                <ScalarProperty Name="ItemOrKitExpedited" ColumnName="ItemOrKitExpedited" />
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InternalDocuments">
+            <EntityTypeMapping TypeName="FenixRezlerTestyModel.InternalDocuments">
+              <MappingFragment StoreEntitySet="InternalDocuments">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ItemVerKit" ColumnName="ItemVerKit" />
+                <ScalarProperty Name="ItemOrKitID" ColumnName="ItemOrKitID" />
+                <ScalarProperty Name="ItemOrKitUnitOfMeasureId" ColumnName="ItemOrKitUnitOfMeasureId" />
+                <ScalarProperty Name="ItemOrKitQualityId" ColumnName="ItemOrKitQualityId" />
+                <ScalarProperty Name="ItemOrKitQuantityBefore" ColumnName="ItemOrKitQuantityBefore" />
+                <ScalarProperty Name="ItemOrKitQuantityAfter" ColumnName="ItemOrKitQuantityAfter" />
+                <ScalarProperty Name="ItemOrKitFreeBefore" ColumnName="ItemOrKitFreeBefore" />
+                <ScalarProperty Name="ItemOrKitFreeAfter" ColumnName="ItemOrKitFreeAfter" />
+                <ScalarProperty Name="ItemOrKitUnConsilliationBefore" ColumnName="ItemOrKitUnConsilliationBefore" />
+                <ScalarProperty Name="ItemOrKitUnConsilliationAfter" ColumnName="ItemOrKitUnConsilliationAfter" />
+                <ScalarProperty Name="ItemOrKitReservedBefore" ColumnName="ItemOrKitReservedBefore" />
+                <ScalarProperty Name="ItemOrKitReservedAfter" ColumnName="ItemOrKitReservedAfter" />
+                <ScalarProperty Name="ItemOrKitReleasedForExpeditionBefore" ColumnName="ItemOrKitReleasedForExpeditionBefore" />
+                <ScalarProperty Name="ItemOrKitReleasedForExpeditionAfter" ColumnName="ItemOrKitReleasedForExpeditionAfter" />
+                <ScalarProperty Name="ItemOrKitExpeditedBefore" ColumnName="ItemOrKitExpeditedBefore" />
+                <ScalarProperty Name="ItemOrKitExpeditedAfter" ColumnName="ItemOrKitExpeditedAfter" />
+                <ScalarProperty Name="StockId" ColumnName="StockId" />
+                <ScalarProperty Name="InternalDocumentsSourceId" ColumnName="InternalDocumentsSourceId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InternalDocumentsSources">
+            <EntityTypeMapping TypeName="FenixRezlerTestyModel.InternalDocumentsSources">
+              <MappingFragment StoreEntitySet="InternalDocumentsSources">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cdlMessageNumber">
+            <EntityTypeMapping TypeName="FenixRezlerTestyModel.cdlMessageNumber">
+              <MappingFragment StoreEntitySet="cdlMessageNumber">
+                <ScalarProperty Name="LastFreeNumber" ColumnName="LastFreeNumber" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CommunicationMessagesDeleteMessage">
+            <EntityTypeMapping TypeName="FenixRezlerTestyModel.CommunicationMessagesDeleteMessage">
+              <MappingFragment StoreEntitySet="CommunicationMessagesDeleteMessage">
+                <ScalarProperty Name="ModifyUserId" ColumnName="ModifyUserId" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="SentUserId" ColumnName="SentUserId" />
+                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+                <ScalarProperty Name="Notice" ColumnName="Notice" />
+                <ScalarProperty Name="DeleteMessageTypeDescription" ColumnName="DeleteMessageTypeDescription" />
+                <ScalarProperty Name="DeleteMessageTypeId" ColumnName="DeleteMessageTypeId" />
+                <ScalarProperty Name="DeleteMessageId" ColumnName="DeleteMessageId" />
+                <ScalarProperty Name="DeleteId" ColumnName="DeleteId" />
+                <ScalarProperty Name="MessageStatusId" ColumnName="MessageStatusId" />
+                <ScalarProperty Name="MessageTypeDescription" ColumnName="MessageTypeDescription" />
+                <ScalarProperty Name="MessageTypeId" ColumnName="MessageTypeId" />
+                <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

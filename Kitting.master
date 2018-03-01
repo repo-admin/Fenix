@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/UPC.Master" AutoEventWireup="true" CodeBehind="Kitting.master.cs" Inherits="Fenix.Kitting" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="BaseHeadContent" runat="server">
+</asp:Content>
+<asp:Content ID="contMainBase" ContentPlaceHolderID="BaseMainContent" runat="server">
+    <div class="nav-left" style="margin-top: 15px;">
+        <ul>
+            <li id="liKittingManuallyOrder" runat="server">
+                <asp:HyperLink ID="mnuKittingManuallyOrder" runat="server" ClientIDMode="Static" ToolTip="" Text="K0 - Objednávka kittingu"></asp:HyperLink>
+            </li>
+            <li id="liKittingReconciliation" runat="server">
+                <asp:HyperLink ID="mnuKittingReconciliation" runat="server" ClientIDMode="Static" ToolTip="" Text="K1 - Schválení kittingu"></asp:HyperLink>
+            </li>
+            <%--Neviditelné položky menu kittingu--%>
+            <li id="liKittingBrowse" runat="server" visible="false">
+                <asp:HyperLink ID="mnuKittingBrowse" runat="server" ClientIDMode="Static" ToolTip="" Text="Přehled objednávek"></asp:HyperLink>
+            </li>
+            <li id="liKittingApproval" runat="server" visible="false">
+                <asp:HyperLink ID="mnuKittingApproval" runat="server" ClientIDMode="Static" ToolTip="" Text="Uvolnění kitů k expedici"></asp:HyperLink>
+            </li>
+            <li id="liKittingCardStockItems" runat="server" visible="false">
+                <asp:HyperLink ID="mnuKittingCardStockItems" runat="server" ClientIDMode="Static" ToolTip="" Text="Karty materiálů a zařízení"></asp:HyperLink>
+            </li>
+        </ul>
+    </div>
+    <div style="clear: right; float: left; width: 1010px; margin-left: 20px; margin-top: 15px">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

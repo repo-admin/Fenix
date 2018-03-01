@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<USERS>
+  <LOGIN id="1">
+    <Nazev>REZLER</Nazev>
+  </LOGIN>
+  <LOGIN id="2">
+    <Nazev>WECZEREK</Nazev>
+  </LOGIN>
+  <LOGIN id="3">
+    <Nazev>VAVRAD</Nazev>
+  </LOGIN>
+  <LOGIN id="4">
+    <Nazev>BEJSOVEC</Nazev>
+  </LOGIN>
+  <LOGIN id="5">
+    <Nazev>BARTAM</Nazev>
+  </LOGIN>
+  <LOGIN id="6">
+    <Nazev>CHOBOT</Nazev>
+  </LOGIN>
+  <LOGIN id="7">
+    <Nazev>MULLEROVA</Nazev>
+  </LOGIN>
+  <LOGIN id="8">
+    <Nazev>STODOLOVA</Nazev>
+  </LOGIN>
+  <LOGIN id="9">
+    <Nazev>BALAC</Nazev>
+  </LOGIN>
+  <LOGIN id="10">
+    <Nazev>PROCHAZKA</Nazev>
+  </LOGIN>
+  <LOGIN id="11">
+    <Nazev>GUBRICKA</Nazev>
+  </LOGIN>
+  <LOGIN id="12">
+    <Nazev>BERAN</Nazev>
+  </LOGIN>
+  <LOGIN id="13">
+    <Nazev>NIKODEMOVA</Nazev>
+  </LOGIN>
+  <LOGIN id="14">
+    <Nazev>TAJBL</Nazev>
+  </LOGIN>
+  <LOGIN id="15">
+    <Nazev>SKRABANKOVA</Nazev>
+  </LOGIN>
+  <LOGIN id="16">
+    <Nazev>ECERNY</Nazev>
+  </LOGIN>
+  <LOGIN id="17">
+    <Nazev>TPATACIK</Nazev>
+  </LOGIN>  
+  <LOGIN id="18">
+    <Nazev>KOLAROVAT</Nazev>
+  </LOGIN>  
+  <LOGIN id="19">
+    <Nazev>DKURINEC</Nazev>
+  </LOGIN>
+</USERS> 
