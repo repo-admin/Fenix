@@ -647,6 +647,14 @@
     <Content Include="_Class Diagrams\Fenix\BasePage.cd" />
     <Content Include="_Class Diagrams\Fenix\CardStockDetail.cd" />
     <Content Include="_Class Diagrams\Fenix\Pages\Default.cd" />
+    <Content Include="KiManuallyOrders.cd" />
+    <Content Include="KiReconciliation.cd" />
+    <Content Include="KiRelease.cd" />
+    <Content Include="KiRepase01.cd" />
+    <Content Include="KiReturns.cd" />
+    <Content Include="KiShipment.cd" />
+    <Content Include="KiShipmentReconciliation.cd" />
+    <Content Include="Kitting.cd" />
     <None Include="Properties\PublishProfiles\Fenix.pubxml" />
     <Content Include="VratRep.master" />
     <Content Include="RpMasterPageReport.master" />
