@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UpcMaster {
+namespace Fenix {
     
     
     public partial class UPC {

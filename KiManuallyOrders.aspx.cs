@@ -10,7 +10,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -113,7 +112,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -160,7 +159,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -191,7 +190,7 @@ namespace Fenix
 			catch (Exception ex)
 			{
 				this.ddlStock.SelectedValue = "-1";
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -904,7 +903,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 		}
 
@@ -1016,7 +1015,7 @@ namespace Fenix
 				catch (Exception ex)
 				{
 					mOK = false;
-					BC.ProcessException(ex, AppLog.GetMethodName(), "help = " + help);
+					BC.ProcessException(ex, ApplicationLog.GetMethodName(), "help = " + help);
 				}
 				finally
 				{

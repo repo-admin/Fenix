@@ -2,7 +2,6 @@
 using System.Data;
 using System.Drawing;
 using System.IO;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -148,7 +147,7 @@ namespace Fenix
 				}
 				catch (Exception x)
 				{
-					BC.ProcessException(x, AppLog.GetMethodName());
+					BC.ProcessException(x, ApplicationLog.GetMethodName());
 				}
 			}
 

@@ -6,7 +6,6 @@ using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -91,7 +90,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "<br />ViewState[Filter] = " + ViewState["Filter"].ToString());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "<br />ViewState[Filter] = " + ViewState["Filter"].ToString());
 			}
 		}
 
@@ -131,7 +130,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}						
 		}
 
@@ -193,7 +192,7 @@ namespace Fenix
 						}
 						catch (Exception ex)
 						{
-							BC.ProcessException(ex, AppLog.GetMethodName(), "<br />ViewState[Filter] = " + ViewState["Filter"].ToString());
+							BC.ProcessException(ex, ApplicationLog.GetMethodName(), "<br />ViewState[Filter] = " + ViewState["Filter"].ToString());
 						}
 						finally
 						{

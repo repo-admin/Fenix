@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Globalization;
-using System.Text;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Xml;
 
 namespace Fenix
 {

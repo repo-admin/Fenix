@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-using FenixHelper;
 
 namespace Fenix.ApplicationHelpers
 {
@@ -40,7 +39,7 @@ namespace Fenix.ApplicationHelpers
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());					
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());					
 				}				
 			}
 

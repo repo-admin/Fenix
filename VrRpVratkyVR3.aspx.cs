@@ -7,7 +7,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -84,7 +83,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "ViewState[Filter] = " + ViewState["Filter"].ToString());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "ViewState[Filter] = " + ViewState["Filter"].ToString());
 			}
 		}
 
@@ -306,7 +305,7 @@ namespace Fenix
 						}
 						catch (Exception ex)
 						{
-							BC.ProcessException(ex, AppLog.GetMethodName(), "program prCMRCconsentVR3");
+							BC.ProcessException(ex, ApplicationLog.GetMethodName(), "program prCMRCconsentVR3");
 						}
 						finally
 						{							
@@ -360,7 +359,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 					xmOK = false;
 				}
 				finally

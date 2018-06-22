@@ -7,7 +7,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 
 namespace Fenix
 {
@@ -94,7 +93,7 @@ namespace Fenix
 			{				
 				this.grdPager.Visible = false; 
 				this.gvKiItems.Visible = false;
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}			
 		}
 

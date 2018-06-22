@@ -1,15 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Collections;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Web;
-using System.Web.Services;
-using System.Web.Services.Protocols;
-using FenixHelper;
 
 namespace Fenix.ApplicationHelpers.LotFile
 {
@@ -96,7 +89,7 @@ namespace Fenix.ApplicationHelpers.LotFile
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				this.Error = ex.Message;
 			}
 			finally

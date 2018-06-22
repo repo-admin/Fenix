@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using FenixHelper;
 using UPC.Extensions.Convert;
 
 namespace Fenix.ApplicationHelpers
@@ -42,7 +41,7 @@ namespace Fenix.ApplicationHelpers
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 			}
 
@@ -82,7 +81,7 @@ namespace Fenix.ApplicationHelpers
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 			}
 
@@ -126,12 +125,12 @@ namespace Fenix.ApplicationHelpers
 					else
 					{
 						Exception ex = new Exception(string.Format("SP prReceptionConfirmationGetSN vrátila hodnotu {0}", sqlComm.Parameters["@ReturnValue"].Value.ToString()));
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 					}
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 				finally
 				{
@@ -142,7 +141,7 @@ namespace Fenix.ApplicationHelpers
 			}
 			catch (Exception ex)
 			{				
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 
 			return result;

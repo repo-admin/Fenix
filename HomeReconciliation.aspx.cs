@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
+using Fenix.Extensions;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -101,7 +101,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -618,7 +618,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 					}
 				}	
 			}

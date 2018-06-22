@@ -10,7 +10,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -145,7 +144,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				this.grdPager.Visible = false;
 				this.gvConfirmationItems.Visible = false;
 				this.gvConfirmationItemsHistory.Visible = false;
@@ -195,7 +194,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 
 			proS = String.Format("SELECT C.*,S.SourceCode  FROM [dbo].[vwCMRSentIt] C LEFT OUTER JOIN cdlSources S ON C.SourceId = S.Id WHERE C.[IsActive] = 1 AND C.CMSOId={0}", grdMainIdKey);
@@ -208,7 +207,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -235,7 +234,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 
 			try
@@ -249,7 +248,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -297,7 +296,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -326,7 +325,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -349,7 +348,7 @@ namespace Fenix
 			}
 			catch(Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 

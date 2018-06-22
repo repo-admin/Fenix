@@ -3,7 +3,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Web.UI.WebControls;
-using FenixHelper;
 using UPC.Extensions.Convert;
 
 namespace Fenix
@@ -113,7 +112,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -244,7 +243,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName(), "proU = " + proU);
+					BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proU = " + proU);
 					xmOK = false;
 				}
 				finally

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
+using Fenix.Extensions;
 using Fenix.Reports;
-using FenixHelper;
 
 namespace Fenix
 {

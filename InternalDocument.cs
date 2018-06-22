@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using FenixHelper;
 
 namespace Fenix
 {
@@ -64,7 +61,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 			}
 
@@ -117,7 +114,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 			} 
 		} 

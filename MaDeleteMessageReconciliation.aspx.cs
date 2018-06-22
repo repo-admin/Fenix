@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Data;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using FenixHelper;
-using UPC.Extensions.Convert;
 
 namespace Fenix
 {
@@ -79,7 +75,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 

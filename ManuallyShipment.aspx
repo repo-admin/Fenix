@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ManuallyShipment.aspx.cs" Inherits="Fenix.ManuallyShipment" %>
-<%@ Register Assembly="UpcWebControls" Namespace="UPC.WebControls" TagPrefix="cc1" %>
 
 <!DOCTYPE html>
 

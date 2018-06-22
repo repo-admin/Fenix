@@ -89,7 +89,7 @@ namespace Fenix
 		/// Naplní GridView daty a skryje požadovaný sloupec/požadované sloupce
 		/// </summary>
 		/// <param name="grdData">GridView, které plníme daty</param>
-		/// <param name="hideColumn">pole sloupců, se kterými chceme pracovat, ale mají být neviditelné</param>
+		/// <param name="hideColumns">pole sloupců, se kterými chceme pracovat, ale mají být neviditelné</param>
 		public void FillObject(ref GridView grdData, int[] hideColumns)
 		{
 			foreach (var hideColumn in hideColumns)

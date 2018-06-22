@@ -10,7 +10,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -127,7 +126,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				this.grdPager.Visible = false; 
 				this.grdData.Visible = false;
 			}			
@@ -158,7 +157,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS =  " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS =  " + proS);
 			}
 		}
 
@@ -509,7 +508,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 						mOk = false;
 						Err += "Záznam <b>nebyl</b> uložen! <br />";
 					}
@@ -709,7 +708,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 		}
 
@@ -730,7 +729,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 
 			proS = string.Format("SELECT TOP 1 cDp.[CompanyName] [CustomerName] ,cDp.[StreetName] [CustomerAddress1] ,cDp.[StreetHouseNumber] [CustomerAddress2] ,cDp.[StreetOrientationNumber] [CustomerAddress3] ,cDp.[City] [CustomerCity] ,cDp.[ZipCode] [CustomerZipCode]" +
@@ -769,7 +768,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 						mOK = false;
 					}
 				}
@@ -804,7 +803,7 @@ namespace Fenix
 						}
 						catch (Exception ex)
 						{
-							BC.ProcessException(ex, AppLog.GetMethodName());
+							BC.ProcessException(ex, ApplicationLog.GetMethodName());
 							mOK = false;
 						}
 					}
@@ -839,7 +838,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName(), "program prRefurbishedConfirmationManuallyIns");
+						BC.ProcessException(ex, ApplicationLog.GetMethodName(), "program prRefurbishedConfirmationManuallyIns");
 						mOK = false;
 					}
 					finally

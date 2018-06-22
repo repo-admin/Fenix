@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
+using Fenix.Extensions;
 using UPC.Extensions.Convert;
 
 namespace Fenix
@@ -156,7 +156,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -240,7 +240,7 @@ namespace Fenix
 						}
 						catch (Exception ex)
 						{
-							BC.ProcessException(ex, AppLog.GetMethodName());
+							BC.ProcessException(ex, ApplicationLog.GetMethodName());
 						}
 						finally
 						{
@@ -257,7 +257,7 @@ namespace Fenix
 				catch (Exception ex)
 				{
 					iDecision = -1;
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 				if (xmOK)
 				{
@@ -387,7 +387,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 				finally
 				{
@@ -398,7 +398,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 			
 			return checkQuantity;
@@ -523,7 +523,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 				finally
 				{							
@@ -534,7 +534,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 
 			return savedOK;
@@ -596,7 +596,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());					
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());					
 			}
 
 			return canDecision;

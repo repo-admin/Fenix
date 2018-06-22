@@ -2,7 +2,6 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using UPC.Extensions.Enum;
 
 namespace Fenix
@@ -104,7 +103,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -191,7 +190,7 @@ namespace Fenix
 				BC.SendMail("Fenix Stránka: " + Request.ServerVariables["SCRIPT_NAME"], "<br />; Uživatel: " +
 					Request.ServerVariables["LOGON_USER"] + "<br />" + ex.Message + "<br />" + err +
 					"<br />", true, "max.weczerek@upc.cz", "", "");
-				BC.ProcessException(ex, AppLog.GetMethodName(), err);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), err);
 			}
 		}
 
@@ -225,7 +224,7 @@ namespace Fenix
 					BC.SendMail("Fenix Stránka: " + Request.ServerVariables["SCRIPT_NAME"], "<br />; Uživatel: " +
 						Request.ServerVariables["LOGON_USER"] + "<br />" + ex.Message + "<br />" + err +
 						"<br />", true, "max.weczerek@upc.cz", "", "");
-					BC.ProcessException(ex, AppLog.GetMethodName(), err);
+					BC.ProcessException(ex, ApplicationLog.GetMethodName(), err);
 				}
 			}
 		}

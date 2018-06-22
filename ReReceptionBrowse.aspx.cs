@@ -9,7 +9,6 @@ using System.Web;
 using System.Web.UI.WebControls;
 using System.Xml;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -145,7 +144,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 
 				this.grdPager.Visible = false; 
 				this.gvConfirmationItems.Visible = false; 

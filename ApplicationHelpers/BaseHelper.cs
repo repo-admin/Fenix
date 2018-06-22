@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 using System.Xml;
-using FenixHelper;
+using Fenix.Extensions;
 using UPC.Extensions.Convert;
 
 namespace Fenix.ApplicationHelpers
@@ -391,7 +391,7 @@ namespace Fenix.ApplicationHelpers
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 			finally
 			{
@@ -471,7 +471,7 @@ namespace Fenix.ApplicationHelpers
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 					}
 					break;
 				}
@@ -523,7 +523,7 @@ namespace Fenix.ApplicationHelpers
 					}
 					catch (Exception ex)
 					{						
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 						tr.Rollback();
 					}
 				}

@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 using OfficeOpenXml;
 
 namespace Fenix
@@ -78,7 +77,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "ViewState[Filter] = " + ViewState["Filter"]);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "ViewState[Filter] = " + ViewState["Filter"]);
 			}
 		}
 
@@ -237,7 +236,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName(), "program prCMRCconsentVR1");
+						BC.ProcessException(ex, ApplicationLog.GetMethodName(), "program prCMRCconsentVR1");
 					}
 					finally
 					{						
@@ -284,7 +283,7 @@ namespace Fenix
 			catch (Exception ex)
 			{
 				mOK = false;
-				BC.ProcessException(ex, AppLog.GetMethodName(), "<br />proU =  " + proU);				
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "<br />proU =  " + proU);				
 			}
 			finally
 			{

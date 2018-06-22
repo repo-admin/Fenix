@@ -10,6 +10,7 @@ using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using UPC.WebControls;
 using UPC.WebUtils.Users;
+using UpcUser = UPC.WebUtils.Users.User;
 
 namespace Fenix
 {
@@ -50,7 +51,7 @@ namespace Fenix
 			{
 				User user = new User();
 				object currUser = HttpContext.Current.Session["FENIX_CURRENT_USER"];
-				user.Login = UPC.WebUtils.Users.User.LogonUserName;
+				user.Login = UpcUser.LogonUserName;
 				if (currUser == null)
 				{
 					//user.Admin = UPC.WebUtils.Users.User.IsValidForApp(1024);

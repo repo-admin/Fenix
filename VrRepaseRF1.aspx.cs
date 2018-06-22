@@ -7,7 +7,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
+using Fenix.Extensions;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -110,7 +110,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());				
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());				
 			}
 		}
 
@@ -146,7 +146,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "<br />proS = " +	proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "<br />proS = " +	proS);
 			}
 			try
 			{
@@ -163,7 +163,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 			try
 			{
@@ -178,7 +178,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 			//******************************
 			String s = HttpUtility.HtmlDecode(drv.Cells[8].Text);
@@ -235,7 +235,7 @@ namespace Fenix
 						}
 						catch (Exception ex)
 						{
-							BC.ProcessException(ex, AppLog.GetMethodName(), "program prCMRCconsentRF");
+							BC.ProcessException(ex, ApplicationLog.GetMethodName(), "program prCMRCconsentRF");
 						}
 						finally
 						{

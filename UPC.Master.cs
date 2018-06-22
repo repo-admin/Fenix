@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Web.UI;
 using System.Xml;
-using Fenix;
 
-namespace UpcMaster
+namespace Fenix
 {
 	public partial class UPC : MasterPage
 	{

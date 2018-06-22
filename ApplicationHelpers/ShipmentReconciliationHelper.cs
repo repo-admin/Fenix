@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-using FenixHelper;
 using UPC.Extensions.Convert;
 
 namespace Fenix.ApplicationHelpers
@@ -42,7 +41,7 @@ namespace Fenix.ApplicationHelpers
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 			}
 
@@ -81,7 +80,7 @@ namespace Fenix.ApplicationHelpers
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 			}
 
@@ -126,7 +125,7 @@ namespace Fenix.ApplicationHelpers
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				}
 				finally
 				{
@@ -137,7 +136,7 @@ namespace Fenix.ApplicationHelpers
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 
 			return result;

@@ -3,7 +3,6 @@ using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 
 namespace Fenix
 {
@@ -100,7 +99,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 				this.hideMainData();
 			}
 		}

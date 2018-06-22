@@ -2,7 +2,6 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
-using FenixHelper;
 
 namespace Fenix
 {
@@ -222,7 +221,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName(), "proU =  " + proU);
+						BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proU =  " + proU);
 						mOK = false;
 					}
 					finally

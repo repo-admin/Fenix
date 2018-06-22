@@ -2,7 +2,6 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
 
 namespace Fenix
 {
@@ -91,7 +90,7 @@ namespace Fenix
 				BC.SendMail("Fenix Stránka: " + Request.ServerVariables["SCRIPT_NAME"].ToString(), "<br />; Uživatel: " +
 					Request.ServerVariables["LOGON_USER"].ToString() + "<br />" + ex.Message + "<br />" + err +
 					"<br />", true, "max.weczerek@upc.cz", "", "");
-				BC.ProcessException(ex, AppLog.GetMethodName(), err);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), err);
 			}
 		}
 

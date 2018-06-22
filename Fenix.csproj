@@ -24,6 +24,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -644,46 +645,23 @@
       <DependentUpon>FenixModel.edmx</DependentUpon>
       <LastGenOutput>FenixModel.cs</LastGenOutput>
     </Content>
-    <Content Include="_Class Diagrams\Fenix\BasePage.cd" />
-    <Content Include="_Class Diagrams\Fenix\CardStockDetail.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\Default.cd" />
-    <Content Include="KiManuallyOrders.cd" />
-    <Content Include="KiReconciliation.cd" />
-    <Content Include="KiRelease.cd" />
-    <Content Include="KiRepase01.cd" />
-    <Content Include="KiReturns.cd" />
-    <Content Include="KiShipment.cd" />
-    <Content Include="KiShipmentReconciliation.cd" />
-    <Content Include="Kitting.cd" />
+    <Content Include="MaCardStockItems.cd" />
+    <Content Include="MaDeletedOrders.cd" />
     <None Include="Properties\PublishProfiles\Fenix.pubxml" />
     <Content Include="VratRep.master" />
     <Content Include="RpMasterPageReport.master" />
+    <Content Include="README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="_Class Diagrams\Fenix\D0DeleteMessage.cd" />
-    <Content Include="_Class Diagrams\Fenix\BC.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\ExExpedition.cd" />
-    <Content Include="_Class Diagrams\Fenix\FenixModel.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\Home.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\HomeReconciliation.cd" />
-    <Content Include="_Class Diagrams\Fenix\InternalDocument.cd" />
-    <Content Include="_Class Diagrams\Fenix\KartySkladuExcel.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\KiApproval.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\KiCardStockItems.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\KiKitting.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\KiKittingBrowse.cd" />
-    <Content Include="_Class Diagrams\Fenix\Pages\KiKittingCodeList.cd" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="_Uml Diagrams\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

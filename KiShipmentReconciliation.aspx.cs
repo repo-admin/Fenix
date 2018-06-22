@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Fenix.ApplicationHelpers;
-using FenixHelper;
+using Fenix.Extensions;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -127,7 +127,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -159,7 +159,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 
 			proS = string.Format("SELECT CMSOS.[CustomerName] ,CMSOS.[CustomerAddress1] ,CMSOS.[CustomerAddress2] ,CMSOS.[CustomerAddress3] ,CMSOS.[CustomerCity] ,CMSOS.[CustomerZipCode],CMSOS.[RequiredDateOfShipment], CMSOS.IsActive" +
@@ -187,7 +187,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName(), "proS = " + proS);
+				BC.ProcessException(ex, ApplicationLog.GetMethodName(), "proS = " + proS);
 			}
 
 			this.btnDecision.Enabled = (drv.Cells[COLUMN_RECONCILIATION].Text == WITHOUT_DECISION);

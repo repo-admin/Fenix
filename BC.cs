@@ -11,7 +11,7 @@ using System.Text;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.UI.WebControls;
-using FenixHelper;
+using Fenix.Extensions;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 using UPC.WebUtils.Users;
@@ -293,7 +293,7 @@ namespace Fenix
 		internal static void ProcessException(Exception exception, string methodName, string additionalInfo)
 		{	
 			SendErrEmail(exception, methodName, additionalInfo);
-			AppLogWrite(AppLog.LOG_CATEGORY_ERROR, exception.Message, MailErrorTo, String.Empty, User.LogonUserId, methodName);
+			AppLogWrite(ApplicationLog.LogCategoryError, exception.Message, MailErrorTo, String.Empty, User.LogonUserId, methodName);
 		}
 								
 		/// <summary>
@@ -453,7 +453,7 @@ namespace Fenix
 			catch (Exception ex)
 			{
 				dataTable = null;
-				ProcessException(ex, AppLog.GetMethodName());
+				ProcessException(ex, ApplicationLog.GetMethodName());
 			}			
 			finally
 			{

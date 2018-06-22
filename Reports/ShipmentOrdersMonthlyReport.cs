@@ -23,6 +23,9 @@ namespace Fenix.Reports
 
 	#endregion
 	
+    /// <summary>
+    /// 
+    /// </summary>
 	public class ShipmentOrdersMonthlyReport
 	{
 		#region Internal Classes

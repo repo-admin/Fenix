@@ -4,7 +4,6 @@ using System.Data.SqlClient;
 using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FenixHelper;
 
 namespace Fenix
 {
@@ -80,7 +79,7 @@ namespace Fenix
 			}
 			catch (Exception ex)
 			{
-				BC.ProcessException(ex, AppLog.GetMethodName());
+				BC.ProcessException(ex, ApplicationLog.GetMethodName());
 			}
 		}
 
@@ -267,7 +266,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{					
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 					mOK = false;
 				}
 				finally
@@ -357,7 +356,7 @@ namespace Fenix
 				}
 				catch (Exception ex)
 				{
-					BC.ProcessException(ex, AppLog.GetMethodName());
+					BC.ProcessException(ex, ApplicationLog.GetMethodName());
 					xmOK = false;
 				}
 				finally
@@ -424,7 +423,7 @@ namespace Fenix
 					}
 					catch (Exception ex)
 					{
-						BC.ProcessException(ex, AppLog.GetMethodName());
+						BC.ProcessException(ex, ApplicationLog.GetMethodName());
 						xmOK = false;
 					}
 					finally
